@@ -20,14 +20,10 @@ ChartJS.register(
 
 const options = {
   responsive: true,
-  //   maintainAspectRatio: true,
   plugins: {
-    legend: {
-      position: "top",
-    },
     title: {
       display: true,
-      text: "Chart.js Bar Chart",
+      text: "Bar Chart",
     },
   },
 };
@@ -38,7 +34,7 @@ const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
+      label: "Wine Data",
       data: [100, 20, 50, 40, 60, 80, 30],
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
