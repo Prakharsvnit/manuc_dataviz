@@ -1,6 +1,5 @@
 import BarChart from "./barChart";
 import ScatterChart from "./scatterChart";
-// import data from "./data";
 
 const App = () => {
   return (
