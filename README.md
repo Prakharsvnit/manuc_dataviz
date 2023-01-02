@@ -6,7 +6,7 @@ In terminal,run this command `git clone https://github.com/Prakharsvnit/manuc_da
 
 ## Install dependencies
 
-In terminal,run this command `yarn add` 
+Change your current directory to project folder.then run this command `yarn add` 
 
 ## Run project
 
