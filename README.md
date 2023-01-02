@@ -1,9 +1,9 @@
 # Getting Started
 
-##Screenshots
+## Screenshots
 
-Bar Chart - ![Bar Chart](https://github.com/Prakharsvnit/manuc_dataviz/blob/master/src/images/barChart.png)
-Scatter Chart - ![Scatter chart](https://github.com/Prakharsvnit/manuc_dataviz/blob/master/src/images/scatterChart.png)
+Bar Chart - ![Bar Chart](https://github.com/Prakharsvnit/manuc_dataviz/blob/master/src/images/barChart.png?raw=true)
+Scatter Chart - ![Scatter chart](https://github.com/Prakharsvnit/manuc_dataviz/blob/master/src/images/scatterChart.png?raw=true)
 
 ## Clone project
 
