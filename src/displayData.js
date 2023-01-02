@@ -1,4 +1,4 @@
-import chartData from "./WineData.json";
+import chartData from "./data/WineData.json";
 
 //calculate data from json file for scatter chart,bar chart to be displayed
 

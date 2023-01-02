@@ -8,7 +8,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import styles from "./charts.module.css";
+import styles from "./css/charts.module.css";
 import { totalAverageArr, arrayofAlcohol } from "./displayData";
 
 ChartJS.register(

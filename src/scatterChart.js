@@ -8,7 +8,7 @@ import {
 } from "chart.js";
 import { Scatter } from "react-chartjs-2";
 import { scatterChartData } from "./displayData";
-import styles from "./charts.module.css";
+import styles from "./css/charts.module.css";
 
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
