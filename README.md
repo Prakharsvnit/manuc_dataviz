@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-Scatter Chart - ![Scatter](https://drive.google.com/file/d/1UYtDMKin0Ic6iVvXStToIlM3sCETv3Hz/view?usp=shareing)
-Bar chart - ![Bar](https://drive.google.com/file/d/1pf0OQ-f6B4cFwy5cNqgTLs8ihq02gJrx/view?usp=sharing)
+Scatter Chart - ![Scatter]
+Bar chart - ![Bar]
 
 ## Clone project
 
