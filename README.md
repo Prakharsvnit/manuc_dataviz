@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-Scatter Chart - ![Scatter]
-Bar chart - ![Bar]
+Scatter Chart - ![scatterChart](https://user-images.githubusercontent.com/19989448/210269977-93273fc7-12f2-4903-ba4d-02a5f42ef93d.png)
+Bar chart - ![barChart](https://user-images.githubusercontent.com/19989448/210270031-be1807fd-724a-4a7d-9476-4105b04d0110.png)
 
 ## Clone project
 
