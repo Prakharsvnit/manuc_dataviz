@@ -13,6 +13,22 @@ import styles from "./charts.module.css";
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const options = {
+  scales: {
+    x: {
+      title: {
+        display: true,
+        align: "end",
+        text: "Color Intensity",
+      },
+    },
+    y: {
+      title: {
+        display: true,
+        align: "end",
+        text: "Hue",
+      },
+    },
+  },
   plugins: {
     title: {
       display: true,

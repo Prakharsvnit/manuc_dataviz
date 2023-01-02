@@ -9,6 +9,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import styles from "./charts.module.css";
+import { totalAverageArr, arrayofAlcohol } from "./displayData";
 
 ChartJS.register(
   CategoryScale,
@@ -20,6 +21,22 @@ ChartJS.register(
 );
 
 const options = {
+  scales: {
+    x: {
+      title: {
+        display: true,
+        align: "end",
+        text: "Alcohol",
+      },
+    },
+    y: {
+      title: {
+        display: true,
+        align: "end",
+        text: "Malic Acid",
+      },
+    },
+  },
   plugins: {
     title: {
       display: true,
@@ -34,14 +51,14 @@ const options = {
   },
 };
 
-const labels = [1, 2, 3];
+const labels = arrayofAlcohol;
 
 const data = {
   labels,
   datasets: [
     {
       label: "Wine Data",
-      data: [100, 20, 50],
+      data: totalAverageArr,
       backgroundColor: "#2DCDDF",
     },
   ],
