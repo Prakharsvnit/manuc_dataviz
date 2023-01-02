@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-Bar Chart - ![Bar Chart](https://github.com/Prakharsvnit/manuc_dataviz/blob/master/src/images/barChart.png?raw=true)
-Scatter Chart - ![Scatter chart](https://github.com/Prakharsvnit/manuc_dataviz/blob/master/src/images/scatterChart.png?raw=true)
+Scatter Chart - [!Scatter](https://drive.google.com/file/d/1UYtDMKin0Ic6iVvXStToIlM3sCETv3Hz/view?usp=shareing)
+Bar chart - [Bar](https://drive.google.com/file/d/1pf0OQ-f6B4cFwy5cNqgTLs8ihq02gJrx/view?usp=sharing)
 
 ## Clone project
 
