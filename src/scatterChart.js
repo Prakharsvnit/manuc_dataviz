@@ -1,63 +1,54 @@
+import * as echarts from "echarts/core";
+import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ScatterChart } from "echarts/charts";
 import {
-  Chart as ChartJS,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Scatter } from "react-chartjs-2";
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+} from "echarts/components";
+import { LabelLayout, UniversalTransition } from "echarts/features";
+import { CanvasRenderer } from "echarts/renderers";
 import { scatterChartData } from "./displayData";
-import styles from "./css/charts.module.css";
 
-ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
+echarts.use([
+  ScatterChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+  LabelLayout,
+  UniversalTransition,
+  CanvasRenderer,
+]);
 
-const options = {
-  scales: {
-    x: {
-      title: {
-        display: true,
-        align: "end",
-        text: "Color Intensity",
-      },
-    },
-    y: {
-      title: {
-        display: true,
-        align: "end",
-        text: "Hue",
-      },
-    },
-  },
-  plugins: {
-    title: {
-      display: true,
-      text: "Scatter Plot",
-    },
-    legend: {
-      display: true,
-      labels: {
-        color: "#2DCDDF",
-      },
-    },
-  },
-};
-
-const data = {
-  datasets: [
+const option = {
+  xAxis: [
     {
-      label: "Wine Data",
+      name: "Color Intensity",
+    },
+  ],
+  yAxis: [
+    {
+      name: "Hue",
+    },
+  ],
+  series: [
+    {
+      symbolSize: 10,
       data: scatterChartData,
-      backgroundColor: "#2DCDDF",
+      type: "scatter",
     },
   ],
 };
 
 const scatterChart = () => {
   return (
-    <div className={styles.charts}>
-      <Scatter options={options} data={data} />;
-    </div>
+    <>
+      <ReactEChartsCore echarts={echarts} option={option} />
+    </>
   );
 };
 

@@ -10,7 +10,6 @@ import {
 } from "echarts/components";
 import { LabelLayout, UniversalTransition } from "echarts/features";
 import { CanvasRenderer } from "echarts/renderers";
-import styles from "./css/charts.module.css";
 import { totalAverageArr, arrayofAlcohol } from "./displayData";
 
 echarts.use([
@@ -31,12 +30,6 @@ const option = {
     axisPointer: {
       type: "shadow",
     },
-  },
-  grid: {
-    left: "3%",
-    right: "4%",
-    bottom: "3%",
-    containLabel: true,
   },
   xAxis: [
     {
@@ -66,9 +59,9 @@ const option = {
 
 const barChart = () => {
   return (
-    <div className={styles.charts}>
+    <>
       <ReactEChartsCore echarts={echarts} option={option} />
-    </div>
+    </>
   );
 };
 

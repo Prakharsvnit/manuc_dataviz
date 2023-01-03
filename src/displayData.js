@@ -2,12 +2,14 @@ import chartData from "./data/WineData.json";
 
 //calculate data from json file for scatter chart,bar chart to be displayed
 
-export const scatterChartData = chartData.map((obj) => {
+const scatterData = chartData.map((obj) => {
   return {
     x: obj["Color intensity"],
     y: obj["Hue"],
   };
 });
+
+const scatterChartData = scatterData.map((obj) => Object.values(obj));
 
 const arrayofAlcohol = [];
 let totalMalicAcidObj = {};
@@ -37,4 +39,4 @@ Object.values(totalMalicAcidObj).forEach((item) => {
   totalAverageArr.push(average);
 });
 
-export { totalAverageArr, arrayofAlcohol };
+export { totalAverageArr, arrayofAlcohol, scatterChartData };
