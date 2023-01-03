@@ -1,11 +1,6 @@
 /* Common css for styling both charts */
 
-/* .charts{   
+.charts{   
     width: 100%; 
-    height: 1200px;
-} */
-
-.echarts-for-react {
-    height: 100%!important; ;
-    width:100% ;
-  }
+    height: 500px;
+}

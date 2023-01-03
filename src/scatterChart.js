@@ -11,6 +11,7 @@ import {
 import { LabelLayout, UniversalTransition } from "echarts/features";
 import { CanvasRenderer } from "echarts/renderers";
 import { scatterChartData } from "./displayData";
+import styles from "./css/charts.module.css";
 
 echarts.use([
   ScatterChart,
@@ -46,9 +47,13 @@ const option = {
 
 const scatterChart = () => {
   return (
-    <>
-      <ReactEChartsCore echarts={echarts} option={option} />
-    </>
+    <div className={styles.charts}>
+      <ReactEChartsCore
+        echarts={echarts}
+        style={{ width: "100%", height: "100%" }}
+        option={option}
+      />
+    </div>
   );
 };
 
