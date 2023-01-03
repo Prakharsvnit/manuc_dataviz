@@ -1,65 +1,65 @@
+import * as echarts from "echarts/core";
+import ReactEChartsCore from "echarts-for-react/lib/core";
+import { BarChart } from "echarts/charts";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+} from "echarts/components";
+import { LabelLayout, UniversalTransition } from "echarts/features";
+import { CanvasRenderer } from "echarts/renderers";
 import styles from "./css/charts.module.css";
 import { totalAverageArr, arrayofAlcohol } from "./displayData";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+echarts.use([
+  BarChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+  LabelLayout,
+  UniversalTransition,
+  CanvasRenderer,
+]);
 
-const options = {
-  scales: {
-    x: {
-      title: {
-        display: true,
-        align: "end",
-        text: "Alcohol",
-      },
-    },
-    y: {
-      title: {
-        display: true,
-        align: "end",
-        text: "Malic Acid",
-      },
+const option = {
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
     },
   },
-  plugins: {
-    title: {
-      display: true,
-      text: "Bar Chart",
-    },
-    legend: {
-      display: true,
-      labels: {
-        color: "#2DCDDF",
-      },
-    },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true,
   },
-};
-
-const labels = arrayofAlcohol;
-
-const data = {
-  labels,
-  datasets: [
+  xAxis: [
     {
-      label: "Wine Data",
+      name: "Alcohol",
+      type: "category",
+      data: arrayofAlcohol,
+      axisTick: {
+        alignWithLabel: true,
+      },
+    },
+  ],
+  yAxis: [
+    {
+      type: "value",
+      name: "Malic Acid",
+    },
+  ],
+  series: [
+    {
+      name: "Malic Acid",
+      type: "bar",
+      barWidth: "60%",
       data: totalAverageArr,
-      backgroundColor: "#2DCDDF",
     },
   ],
 };
@@ -67,7 +67,7 @@ const data = {
 const barChart = () => {
   return (
     <div className={styles.charts}>
-      <Bar options={options} data={data} />;
+      <ReactEChartsCore echarts={echarts} option={option} />
     </div>
   );
 };
